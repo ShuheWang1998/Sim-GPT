@@ -23,6 +23,8 @@ In this repo you can find:
       - [SimCSE Training](#simcse-training)
       - [PromCSE Training](#promcse-training)
     - [GPT-4 Data Annotation](#gpt-4-data-annotation)
+      - [Step 1: Download Source Data](#step-1-download-source-data)
+      - [Step 2: GPT-4 Access](#step-2-gpt-4-access)
     - [Training STS Models](#training-sts-models)
     - [Evaluation](#evaluation)
   - [Released Best Models](#released-best-models)
@@ -84,7 +86,14 @@ setuptools==49.3.0
 ### GPT-4 Data Annotation
 Here, we provide links to download source data and prompts to instruct GPT-4 to do annotation.
 
+#### Step 1: Download Source Data
 Source data links:
+* [Captions (Flickr30K)](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset)
+* [Questions (Quora Question Pairs)](https://www.kaggle.com/datasets/quora/question-pairs-dataset)
+* For Multi-genre long sentences, we only release the annotated version.
+
+#### Step 2: GPT-4 Access
+
 
 
 ### Training STS Models
