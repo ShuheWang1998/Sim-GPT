@@ -306,14 +306,14 @@ Table 1: Results reported in our paper on 7 STS tasks.
     </tr> 
     <tr>
         <td>SimGPT - PromCSE-RoBERTa-large</td> 
-        <td>80.13 (+0.57)</td> 
-        <td>88.88 (-0.09)</td> 
-        <td>84.09 (+0.28)</td>
-        <td>88.27 (+0.19)</td> 
-        <td>85.90 (+0.94)</td> 
-        <td>88.04 (+0.17)</td>
-        <td>82.96 (+0.53)</td> 
-        <td><b>85.47 (+0.37)</b></td> 
+        <td>79.92 (+0.36)</td> 
+        <td>88.87 (-0.10)</td> 
+        <td>84.29 (+0.48)</td>
+        <td>88.64 (+0.56)</td> 
+        <td>85.94 (+0.98)</td> 
+        <td>88.18 (+0.31)</td>
+        <td>82.79 (+0.36)</td> 
+        <td><b>85.52 (+0.42)</b></td> 
     </tr> 
     
 </table>
