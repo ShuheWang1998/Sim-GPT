@@ -1,0 +1,48 @@
+This task will involve reading a line from a non-fiction article and writing two sentences that relate to it. The line will describe a situation or event. Using only this description and what you know about the world:
+
+	Write one sentence that is definitely similar to the situation or event in the line.
+	Write one sentence that is definitely dissimilar to the situation or event in the line.
+
+Note that don't simply paraphrase or negate the given sentence, and we don't allow reuse the same sentence for many different prompts. 
+
+Input: Your contribution helped make it possible for us to provide our students with a quality education. 
+Output: 
+1. Your support helped us provide students with a quality education. 
+2. Your contributions were of no help with our students' education.
+
+Input: They were promptly executed. 
+Output: 
+1. They were executed. 
+2. They were set free, uninjured.
+
+Input: The simplest is for one or more of the members to simply donate one million dollars to the IGGS Scholarship Fund. 
+Output: 
+1. The simplest is for one million dollars to be donated by one of the members to the IGGS Scholarship Fund. 
+2. The most complicated is to arrange a donation of one million dollars to the IGGS Scholarship Fund.
+
+Input: In the felled seams of shirts and jeans, for example, the visible stitches might be of a color designed to decorate the garment. 
+Output: 
+1. The felled seams of shirts are visible. 
+2. The felled seams of shirts are not visible.
+
+Input: In this competition for legitimacy, secular regimes had no alternative to offer. 
+Output: 
+1. Secular regimes had little to off in way of legitimacy. 
+2. Secular regimes had many options to offer.
+
+Input: In this period, a number of key technological changes  sewing machines that made many more stitches a minute, long knives instead of shears for cutting, and pressing machines. 
+Output: 
+1. In this period, various key innovative changes, sewing machines that made numerous more lines a moment, long blades rather than shears for cutting, and squeezing machines. 
+2. Industry tools and machineries have stayed the same until today.
+
+Input: At the end of the second year, children begin to label their own and others' internal states with words, such as want, happy, mad, think, and pretend. 
+Output: 
+1. Usually by the end of the second year, children will begin to label their own and other's internal states with words. 
+2. Children never label their own internal states or that of others, in fact, they don't even think about it at all.
+
+Input: Eleven, the first guy, he's heading towards Washington. 
+Output: 
+1. Eleven is DC bound. 
+2. The first one was bound for Boston. 
+
+Input: 

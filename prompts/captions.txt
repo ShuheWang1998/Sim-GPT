@@ -1,0 +1,48 @@
+This task will involve reading a line from a caption and writing two sentences that relate to it. Using only this description and what you know about the world:
+
+	Write one sentence that is definitely similar to the situation or event in the line.
+	Write one sentence that is definitely dissimilar to the situation or event in the line.
+
+Note that don't simply paraphrase or negate the given sentence, and we don't allow reuse the same sentence for many different prompts.
+
+Input: This church choir sings to the masses as they sing joyous songs from the book at a church.
+Output:
+1. The church is filled with song. 
+2. A choir singing at a baseball game. 
+
+Input: A woman with a green headscarf, blue shirt and a very big grin. 
+Output: 
+1. The woman is very happy. 
+2. The woman has been shot. 
+
+Input: An old man with a package poses in front of an advertisement. 
+Output: 
+1. A man poses in front of an ad. 
+2. A man walks by an ad. 
+
+Input: A statue at a museum that no seems to be looking at. 
+Output: 
+1. There is a statue that not many people seem to be interested in. 
+2. Tons of people are gathered around the statue. 
+
+Input: A land rover is being driven across a river. 
+Output: 
+1. A vehicle is crossing a river. 
+2. A sedan is stuck in the middle of a river. 
+
+Input: A man playing an electric guitar on stage. 
+Output: 
+1. A man playing guitar on stage. 
+2. A man playing banjo on the floor. 
+
+Input: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground. 
+Output: 
+1. A tan girl runs leans over an object. 
+2. A boy runs into a wall. 
+
+Input: Two teenage girls conversing next to lockers. 
+Output: 
+1. People talking next to lockers. 
+2. Girls talking next to the toilet. 
+
+Input: 

@@ -1,0 +1,48 @@
+This task will involve reading a line from a question and writing two questions that relate to it. The line will describe a situation or event. Using only this description and what you know about the world:
+
+	Write one question is definitely similar to the situation or event in the line.
+	Write one question is definitely dissimilar to the situation or event in the line.
+
+Note that don't simply paraphrase or negate the given sentence, and we don't allow reuse the same sentence for many different prompts. 
+
+Input: How did Michel Foucault feel about surveillance society? 
+Output: 
+1. What is Michel Foucaults opinion on surveillance society? 
+2. What are the main ingredients in a traditional apple pie?
+
+Input: At what time should I drink green tea to be fit? 
+Output: 
+1. What is the best time to drink green tea for fitness? 
+2. Does Lipton green tea Assist in weight loss? 
+
+Input: Is Quora becoming the new Facebook? 
+Output: 
+1. Is Quora becoming a new Facebook? 
+2. Does Quora have nothing in common with Facebook?
+
+Input: Is 12 Mbps a good internet speed for streaming and gaming? 
+Output: 
+1. Would I be able to stream and game effectively with a 12 Mbps internet connection? 
+2. Is 6 Mbps download and 2 Mbps upload speed good for a 4G LTE connection?
+
+Input: How can I increase my website page rank? 
+Output: 
+1. How do I increase page rank of website? 
+2. What techniques can lower my website's page rank? 
+
+Input: 2 states movie download? 
+Output: 
+1. Where can I download the movie "2 States"? 
+2. Who controls the U.S president?
+
+Input: What direction are you going when travelling from Malaga to Gibraltar? 
+Output: 
+1. What direction are you travelling from malaga to gibralter? 
+2. What direction are you going when travelling from Gibraltar to Malaga?
+
+Input: Do animal cells have cell walls? 
+Output: 
+1. Can you find cell walls in animal cells? 
+2. Is anatomy destiny? 
+
+Input: 
