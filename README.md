@@ -31,9 +31,6 @@ In this repo you can find:
     - [Results](#results)
   - [Released Best Models](#released-best-models)
   - [Released GPT-4 Labeled Data](#released-gpt-4-labeled-data)
-    - [Captions](#captions)
-    - [Questions](#questions)
-    - [Multi-genre Sentences](#multi-genre-sentences)
   - [Contact](#contact)
 
 ## Introduction
@@ -323,14 +320,20 @@ Table 1: Results reported in our paper on 7 STS tasks.
 
 
 ## Released Best Models
-
+Our released models are listed as following:
+|              Model              | Avg. STS |
+|:-------------------------------|:--------:|
+|  [simgpt-simcse-roberta-base](https://drive.google.com/drive/folders/16dLNL_fDI3Vu7FZzo0VRpQo1Kp98YoNm?usp=sharing) |   83.14 |
+| [simgpt-simcse-roberta-large](https://drive.google.com/drive/folders/1F9eLNDIt3nrI_HvC452eq3seKgJtXNjz?usp=sharing) |   84.75  |
+|    [simgpt-promcse-roberta-base](https://drive.google.com/drive/folders/1B32cOC9421ORHfKC_pJc_FuRTw-FMTIj?usp=sharing)    |   83.57  |
+|    [simgpt-promcse-roberta-large](https://drive.google.com/drive/folders/12T1cWvYC7YtajQGh4nUPE9T0kbcbGQFz?usp=sharing)   |   85.52  |
 
 ## Released GPT-4 Labeled Data
-
-### Captions
-
-### Questions
-
-### Multi-genre Sentences
+Our released annotated data are:
+* [Captions](https://drive.google.com/file/d/1wqy1vYLfe1fg01DMjsGAzbf46u6KOt5o/view?usp=sharing)
+* [Questions](https://drive.google.com/file/d/1-aSCCoupDQvojk1wHNLsoJnPd-lSYwPN/view?usp=sharing)
+* [Multi-genre long sentences](https://drive.google.com/file/d/1vvejC0RZadq0B7nZZCaay5B0HLIXaJsW/view?usp=sharing)
+* [Final Training Data](https://drive.google.com/file/d/1hcOwNn2b6730yb8HyM_uyaTtPc5sBCys/view?usp=sharing)
 
 ## Contact
+If you have any issues or questions about this repo, feel free to contact wangshuhe@stu.pku.edu.cn
