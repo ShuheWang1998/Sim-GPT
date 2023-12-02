@@ -41,8 +41,8 @@ secondly, a smaller model (e.g., backboned by RoBERTa) is trained based on the s
 
 Illustraitions for our Sim-GPT is following:
 
-![](figure/step1.png)
-![](figure/step2.png)
+![](figure/step_1.png)
+![](figure/step_2.png)
 
 
 ## Reproduce
