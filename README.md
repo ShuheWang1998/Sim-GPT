@@ -1,42 +1,42 @@
-# Sim-GPT: Text Similarity via GPT Synthesized Data
+# Sim-GPT: Text Similarity via GPT Annotated Data
 
-This repo is for our paper: [Sim-GPT: Text Similarity via GPT Synthesized Data](). 
+This repo is for our paper: [Sim-GPT: Text Similarity via GPT Annotated Data](https://arxiv.org/abs/2312.05603). 
 
 In this repo you can find:
 * Scripts to reproduce our results.
 * Non-labeled and labeled data used in our paper.
-* Best models demonstrated in our paper.
+* Best checkpoints demonstrated in our paper.
 
 ## Upate
 
-* November XX, 2023 we released our paper: [arxiv]().
+* December 12, 2023 we released our scripts, checkpoints and data.
+* December 12, 2023 we released our paper in [arxiv](https://arxiv.org/abs/2312.05603).
 
 
 ## Links
-- [Sim-GPT: Text Similarity via GPT Synthesized Data](#sim-gpt-text-similarity-via-gpt-synthesized-data)
+- [Sim-GPT: Text Similarity via GPT Annotated Data](#sim-gpt-text-similarity-via-gpt-annotated-data)
   - [Upate](#upate)
   - [Links](#links)
   - [Introduction](#introduction)
   - [Reproduce](#reproduce)
-    - [Requriements](#requriements)
-      - [OpenAI Access](#openai-access)
-      - [SimCSE Training](#simcse-training)
-      - [PromCSE Training](#promcse-training)
-    - [GPT-4 Data Annotation](#gpt-4-data-annotation)
-      - [Step 1: Download Source Data](#step-1-download-source-data)
-      - [Step 2: GPT-4 Access](#step-2-gpt-4-access)
-    - [Training STS Models](#training-sts-models)
-      - [Training Step](#training-step)
-    - [Evaluation](#evaluation)
-    - [Results](#results)
-  - [Released Best Models](#released-best-models)
-  - [Released GPT-4 Labeled Data](#released-gpt-4-labeled-data)
+    - [Step 1: Requriements](#step-1-requriements)
+      - [1. OpenAI Requriements](#1-openai-requriements)
+      - [2. SimCSE Requriements](#2-simcse-requriements)
+      - [3. PromCSE Requriements](#3-promcse-requriements)
+    - [Step 2: GPT-4 Data Annotation](#step-2-gpt-4-data-annotation)
+      - [1. Download Source Data](#1-download-source-data)
+      - [2. GPT-4 Annotation](#2-gpt-4-annotation)
+    - [Step 3: Training STS Models](#step-3-training-sts-models)
+    - [Step 4: Evaluation](#step-4-evaluation)
+    - [Step 5: Results](#step-5-results)
+  - [Released Checkpoints](#released-checkpoints)
+  - [Released GPT-4 Annotated Data](#released-gpt-4-annotated-data)
   - [Contact](#contact)
 
 ## Introduction
-To address the longstanding issue with the STS task: the lack of a large collection of high-quality labeled training data, we propose Sim-GPT generating data with STS labels using GPT-4, based on which an STS model is trained.
+To address the longstanding issue with the STS task: the lack of a large collection of high-quality labeled training data, we propose Sim-GPT. This approach involves using GPT-4 to generate data with STS labels, upon which an STS model is subsequently trained.
 
-Sim-GPT does not directly ask LLMs (e.g., GPT-4) to provide STS scores for a newly-encounter sentence pair. But rather, it firstly asks LLMs to generate a relatively large set of training data; 
+Sim-GPT does not directly ask LLMs (e.g., GPT-4) to provide STS scores for a newly-encountered sentence pair. But rather, it firstly asks LLMs to generate a relatively large set of training data; 
 secondly, a smaller model (e.g., backboned by RoBERTa) is trained based on the synthesized data from LLMs; At test time, the trained model is used for inference. 
 
 Illustraitions for our Sim-GPT is following:
@@ -47,13 +47,13 @@ Illustraitions for our Sim-GPT is following:
 
 ## Reproduce
 
-### Requriements
-#### OpenAI Access
+### Step 1: Requriements
+#### 1. OpenAI Requriements
 * python>=3.7.3
 * openai>=0.27.2
 
-#### SimCSE Training
-For training SimCSE models, we followed: [this repo](https://github.com/princeton-nlp/SimCSE). To save your time, we directly copy them as following:
+#### 2. SimCSE Requriements
+For training SimCSE models, we followed: [SimCSE](https://github.com/princeton-nlp/SimCSE). To be efficient, we have directly copied them as follows for your convenience:
 
 ```
 transformers==4.2.1
@@ -67,8 +67,8 @@ torch
 setuptools
 ```
 
-#### PromCSE Training
-For training PromCSE models, we followed: [this repo](https://github.com/YJiangcm/PromCSE). To save your time, we directly copy them as following:
+#### 3. PromCSE Requriements
+For training PromCSE models, we followed: [PromCSE](https://github.com/YJiangcm/PromCSE). To be efficient, we have directly copied them as follows for your convenience:
 
 ```
 transformers==4.2.1
@@ -82,37 +82,35 @@ torch
 setuptools==49.3.0
 ```
 
-### GPT-4 Data Annotation
-Here, we provide links to download source data and prompts to instruct GPT-4 to do annotation.
+### Step 2: GPT-4 Data Annotation
+In this part, we offer links to download the source data and provide prompts that guide GPT-4 in the annotation process.
 
-#### Step 1: Download Source Data
-Source data links:
+#### 1. Download Source Data
+Three types of data:
 * [Captions (Flickr30K)](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset)
 * [Questions (Quora Question Pairs)](https://www.kaggle.com/datasets/quora/question-pairs-dataset)
 * For Multi-genre long sentences, we only release the annotated version.
 
-#### Step 2: GPT-4 Access
-Used prompts:
+#### 2. GPT-4 Annotation
+Prompts:
 * Captions: `./prompts/captions.txt`
 * Questions: `./prompts/questions.txt`
 * Multi-genre Sentences: `./prompts/multi_genre_sentences.txt`
 
 It's worth noting that for several reasons while accessing GPT-4 (e.g, bacth size, network), 
-the data re-created using the above prompts may vary slightly from the dataset we have released. Never mind, as we discussed in our paper: even if the prompt changes a lot, the performance of the model trained on the generated data remains relatively stable for the STS task.
+the data re-created using the above prompts may vary slightly from the dataset we have released. 
+As mentioned in our paper, despite significant variations in the prompt, the performance of the model, when trained on the generated data, tends to remain consistent for the STS task.
 
 
-### Training STS Models
-Models [SimCSE](https://arxiv.org/pdf/2104.08821.pdf) and [PromCSE](https://arxiv.org/pdf/2203.06875.pdf) are used in this work, thus, for model details, please visit: [SimCSE](https://github.com/princeton-nlp/SimCSE) and [PromCSE](https://github.com/YJiangcm/PromCSE).
+### Step 3: Training STS Models
 
-
-#### Training Step
-1. Clone the corresponding project:
+1. Clone the related project:
    1. [SimCSE](https://github.com/princeton-nlp/SimCSE)
    2. [PromCSE](https://github.com/YJiangcm/PromCSE)
 2. Download backboned RoBERTa models:
    1. [RoBERTa-base](https://huggingface.co/roberta-base)
    2. [RoBERTa-large](https://huggingface.co/roberta-large)
-3. Fill the `roberta path`, `input file` and `output directory` in our provided training scripts:
+3. Fill the `roberta path`, `input file` and `output directory` into our provided training scripts:
    1. SimCSE-RoBERTa
       1. base: `./training-parameters/simcse/sup_roberta_base.sh`
       2. large: `./training-parameters/simcse/sup_roberta_large.sh`
@@ -124,14 +122,13 @@ Models [SimCSE](https://arxiv.org/pdf/2104.08821.pdf) and [PromCSE](https://arxi
 5. Run the training scirpt, such as: `bash SimCSE/sup_roberta_base.sh`
 
 
-### Evaluation
+### Step 4: Evaluation
 We evaluate Sim-GPT on 7 STS tasks, and report the score of Spearman's correlation.
 
-Same as the training step, before the evaluation, please clone the related project:
-1. [SimCSE](https://github.com/princeton-nlp/SimCSE)
-2. [PromCSE](https://github.com/YJiangcm/PromCSE)
-
-Then, run the official evaluation code, for example:
+1. Clone the related project:
+   1. [SimCSE](https://github.com/princeton-nlp/SimCSE)
+   2. [PromCSE](https://github.com/YJiangcm/PromCSE)
+2. Run the official evaluation code, for example:
 ```
 python SimCSE/evaluation.py \
     --model_name_or_path simgpt-simcse-roberta-large \
@@ -149,7 +146,7 @@ which is expected to output the results in a tabular format:
 ```
 
 
-### Results
+### Step 5: Results
 Table 1: Results reported in our paper on 7 STS tasks.
 <table border=2>
     <tr>
@@ -319,8 +316,7 @@ Table 1: Results reported in our paper on 7 STS tasks.
 </table>
 
 
-## Released Best Models
-Our released models are listed as following:
+## Released Checkpoints
 |              Model              | Avg. STS |
 |:-------------------------------|:--------:|
 |  [simgpt-simcse-roberta-base](https://drive.google.com/drive/folders/16dLNL_fDI3Vu7FZzo0VRpQo1Kp98YoNm?usp=sharing) |   83.14 |
@@ -328,7 +324,7 @@ Our released models are listed as following:
 |    [simgpt-promcse-roberta-base](https://drive.google.com/drive/folders/1B32cOC9421ORHfKC_pJc_FuRTw-FMTIj?usp=sharing)    |   83.57  |
 |    [simgpt-promcse-roberta-large](https://drive.google.com/drive/folders/12T1cWvYC7YtajQGh4nUPE9T0kbcbGQFz?usp=sharing)   |   85.52  |
 
-## Released GPT-4 Labeled Data
+## Released GPT-4 Annotated Data
 Our released annotated data are:
 * [Captions](https://drive.google.com/file/d/1wqy1vYLfe1fg01DMjsGAzbf46u6KOt5o/view?usp=sharing)
 * [Questions](https://drive.google.com/file/d/1-aSCCoupDQvojk1wHNLsoJnPd-lSYwPN/view?usp=sharing)
